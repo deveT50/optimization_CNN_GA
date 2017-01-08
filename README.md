@@ -1,14 +1,15 @@
 #optimization_CNN_GA  
 CNNとGAによる離散最適化問題への挑戦（開発中）  
-python  
+python3  
 
-GA（遺伝的アルゴリズム）を用いて離散最適化問題を解く実験。*1  
-最適化問題の一種である「ビンパッキング問題」を対象とした。*2  
+GA（遺伝的アルゴリズム）を用いて離散最適化問題を解く実験。＊1  
+最適化問題の一種である「ビンパッキング問題」を対象とした。＊2  
 現実問題への応用を念頭に、画像中に写った物体の重量と容器の容量をCNN（畳み込みニューラルネットワーク）で推定し、  
 GAで最適な物体の組み合わせと必要となる容器の個数を求める。  
 ２人チームで筆者はCNNを担当した。  
-*1元ネタはこちら<http://qiita.com/simanezumi1989/items/10cfe1e8a23cd9d4c7b1>  
-*2「ビンパッキング問題」についてはこちら<http://qiita.com/Tsutomu-KKE@github/items/36788d01fb3be80564a1>  
+  
+＊1元ネタはこちら<http://qiita.com/simanezumi1989/items/10cfe1e8a23cd9d4c7b1>  
+＊2「ビンパッキング問題」についてはこちら<http://qiita.com/Tsutomu-KKE@github/items/36788d01fb3be80564a1>  
 
 
 
