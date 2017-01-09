@@ -83,7 +83,8 @@ if __name__ == '__main__':
 	#画像リスト作成
 	i=1	
 	w_offset=8#物体の重さオフセット
-	c_scale=8#容器の容量定数倍
+	w_scale=10#物体重量定数倍
+	c_scale=80#容器の容量定数倍
 	outfile = open('in_list.txt','w')#出力ファイル名
 	pick_idx_ctn=0
 
@@ -95,7 +96,7 @@ if __name__ == '__main__':
 			break;
 		path=os.path.join('.', l.strip().split()[0])
 		weight=round(predict(path,model_obj,mean_obj,sigma_obj),0)
-		outfile.write(str(i)+","+str(weight+w_offset)+"\r")
+		outfile.write(str(i)+","+str((weight+w_offset)*w_scale)+"\n")
 		i+=1
 		print(path)
 	
@@ -103,7 +104,7 @@ if __name__ == '__main__':
 	lst=open((args.path_ctn),"r").readlines()
 	path=lst[args.cidx].strip().split()[0]#引数で使用された容器を使う
 	capacity=round(predict(path,model_ctn,mean_ctn,sigma_ctn),0)
-	outfile.write("0"+","+str(capacity*c_scale)+"\r")
+	outfile.write("0"+","+str(capacity*c_scale)+"\n")
 	outfile.close()
 	print(path)
 
